@@ -1,0 +1,114 @@
+//
+// |--------------------------------------------------------------------------
+// | ELEMENTS
+// | --------
+// | Only generic elements, no specific section stuff.
+// |--------------------------------------------------------------------------
+//
+	
+.custom-list
+	.list-group-item
+		position: relative
+		@include transition(0.2s)
+		&:hover
+			background-color: #f9f9f9
+		.list-actions
+			@include flex-center
+			position: absolute
+			right: 0
+			top: 0
+			height: 100%
+			.item
+				padding: 0 5px
+				@include transition(0.2s)
+				&:hover
+					cursor: pointer
+
+.close-top-right
+	position: absolute
+	top: 10px
+	right: 10px
+	&:hover
+		cursor: pointer
+
+.custom-small-table
+	font-size: 0.8rem
+	tbody tr td
+		padding: 1px 
+		border: 0 !important
+		max-width: 300px
+		font-weight: 300
+
+.small-list
+	.small-list-item
+		padding: 15px 10px 15px 70px
+		color: #000
+		position: relative
+		border-bottom: 1px solid $grey-l
+		@include transition(0.2s)
+		
+		.content
+			line-height: 1rem
+			.top-text
+				font-size: .7rem
+				font-weight: 700
+				color: $palette1
+			.main-text
+				font-size: .9rem
+				font-weight: 700
+			.bottom-text
+				font-size: .8rem
+				font-weight: 300
+		.image-container
+			position: absolute
+			left: 10px
+			top: 0
+			height: 100%
+			@include flex-center
+			.image
+				max-width: 100%
+				border-radius: 50px
+				height: 50px
+				width: 50px
+		&:hover
+			background-color: $grey-l2
+			cursor: pointer
+	.small-list-item-active
+		background-color: $grey-l2
+//
+// |--------------------------------------------------------------------------
+// | DECORATION
+// |--------------------------------------------------------------------------
+//	
+.quote
+	font-style: italic
+	font-weight: 400
+	position: relative
+	max-width: 800px
+	font-family: $font1
+	margin-bottom: 30px
+	.quote-sign
+		font-weight: 300
+		position: absolute
+		right: 0
+		bottom: -25px 
+
+
+
+//
+// |--------------------------------------------------------------------------
+// | BUTTONS
+// |--------------------------------------------------------------------------
+//	
+
+.text-btn
+	padding: 0 10px
+
+.hamburguer-icon
+	float: right
+	> div
+		width: 35px
+		height: 3px
+		background-color: black
+		margin: 6px 0
+

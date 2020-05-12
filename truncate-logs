@@ -1,0 +1,7 @@
+#!/bin/bash
+
+truncate -s 0 /var/www/html/vadmin/storage/logs/laravel.log;
+truncate -s 0 /var/www/html/vadminv/storage/logs/laravel.log;
+truncate -s 0 /var/www/html/vadmin2/storage/logs/laravel.log;
+truncate -s 0 /var/www/html/unicfi/storage/logs/laravel.log;
+truncate -s 0 /var/www/html/baclothes/storage/logs/laravel.log;

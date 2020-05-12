@@ -1,0 +1,224 @@
+//
+// |--------------------------------------------------------------------------
+// | SIDEBAR
+// |--------------------------------------------------------------------------
+//
+
+.sidebar	
+	position: fixed
+	left: 0
+	top: 0
+	bottom: 0
+	width: 256px
+	height: 100vh
+	z-index: 1030
+	display: -ms-flexbox
+	display: flex
+	-ms-flex: 0 0 256px
+	flex: 0 0 256px
+	-ms-flex-direction: column
+	flex-direction: column
+	-ms-flex-order: -1
+	order: -1
+	width: 256px
+	padding: 0
+	box-shadow: none
+	color: #fff
+	background: #383838
+	@include transition2(0.2s)
+	.sidebar-header
+		padding: 7px 10px 8px 18px
+		background-color: #383838
+		min-height: $navHeaderHeight
+		@include flex-center
+		a
+			text-align: center
+		img
+			max-width: 70%
+			max-height: 100%
+	.sidebar-content
+		height: 100vh
+		// overflow: scroll
+
+
+	.sidebar-item
+		background-color: $palette3
+		border-left: 0
+		border-radius: 0
+		position: relative
+		border-bottom: 1px solid $palette1
+		@include transition(0.2s)
+		@include flex-center
+		a
+			padding: 10px 20px 
+			display: inline-block
+			width: 100%
+			font-weight: 300
+			color: #fff
+			@include flex-center-left
+			&:hover
+				color: #ccc
+			i.sidebar-item-icon
+				font-size: 0.7rem
+				margin-right: 10px
+				// background-color: $palette1
+				color: #fff
+				padding: 7px 8px
+				width: 26px
+				height: 26px
+				border-radius: 50%
+			.bicon
+				@include flex-center-left
+				height: 100%
+				width: 35px
+				img
+					-webkit-filter: invert(100%)
+					filter: invert(100%)
+					max-height: 100%
+
+		.sidebar-right-icons
+			position: absolute
+			right: 8px
+			top: 0
+			height: 100%
+			@include flex-center
+			img
+				max-height: 100%
+				-webkit-filter: invert(100%)
+				filter: invert(100%)
+				max-height: 100%
+
+		.sidebar-openclose-icon
+			font-size: 0.7rem
+			right: 14px
+
+	.sidebar-item-parent
+		background-color: red !important
+		.sidebar-item
+			background-color: blue !important
+	
+	.sidebar-item-closed
+		a 
+			height: 0
+
+	.active
+		border-left: 4px solid $palette6 !important	
+	
+	
+.sidebar-closed
+	margin-left: -256px
+	
+	
+	
+	// .sidebar-item-active
+	// 	border-left: 4px solid $palette6 !important
+	// .sidebar-item.opened
+	// 	display: block
+	// .sidebar-parent
+	// 	padding: 10px 20px 
+	// 	background-color: $palette3
+	// 	i
+	// 		font-size: 0.8rem
+	// 		margin-right: 10px
+	// 		color: blue
+	// .sidebar-child
+	// 	padding-left: 15px
+	// 	border-left: 0
+	// 	border-radius: 0
+		
+	// // Toggle Item on click
+	// .sidebar-toggeable
+	// 	filter: brightness(1.2)
+	// 	position: relative
+	// 	&:after
+	// 		position: absolute
+	// 		right: 12px
+	// 		top: 6px
+	// 		color: $palette6
+	// 		content: '-'
+	// 		@include transition(0.2s)
+	// 	.sidebar-child
+	// 		opacity: 1
+	// 		height: 45px
+	// 		@include transition(0.1s)
+	// .sidebar-toggeable.closed
+	// 	&:after
+	// 		content: '+'
+	// 	filter: brightness(1)
+	// 	.sidebar-child
+	// 		opacity: 0
+	// 		height: 0px
+	// 		border: 0
+	// // Active states
+	// .sidebar-active
+	// 	filter: brightness(1.5)
+	// 	background-color: $palette5
+	// .disabled
+	// 	cursor: not-allowed
+	// 	color: #ccc
+
+
+
+.nav-header
+	position: fixed
+	height: $navHeaderHeight
+	background-color: #383838
+	margin-left: $mainSectionMargin
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	flex-shrink: 0
+	right: 0
+	left: 0
+	z-index: 1030
+	@include transition2(0.2s)
+	i, svg
+		color: #fff
+		font-size: 1.2rem
+	.left-items
+		@include flex-center
+		height: 100%
+		width: 50px
+		white-space: nowrap
+	.right-items
+		height: 100%
+		white-space: nowrap
+		padding-right: 10px
+		.right-menu
+			height: 100%
+			.user-name
+				font-family: $font1
+				font-size: 1rem
+				font-weight: 300
+				margin-right: 10px
+			.user-image
+				height: 40px
+				width: 40px
+				max-width: 100%
+				max-height: 100%
+				border-radius: 50%
+			button
+				background: transparent
+				border: 0
+				&:after
+					display: none
+			.dropdown-menu
+				border: 0
+			.dropdown-item
+				height: 40px
+				border-bottom: 1px solid $palette1
+				@include flex-center-left
+				.icon
+					margin-right: 10px
+				&:focus
+					border: 0
+				&:active
+					background-color: $palette1
+					img
+						filter: invert(1)
+					.icon
+						filter: invert(1)
+
+
+.nav-header-full
+	margin-left: 0

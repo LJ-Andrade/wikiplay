@@ -1,0 +1,131 @@
+//
+// |--------------------------------------------------------------------------
+// | SKIN
+// |--------------------------------------------------------------------------
+//
+
+
+body
+	background-color: $body-bg
+	
+body,a,p,h1,h2,h3,h4,h5
+	font-family: $font1
+p
+	font-weight: 300
+	
+h1
+	font-size: 1.5rem
+	font-weight: 300
+h2
+	font-size: 1.4rem
+h3
+	font-size: 1.3rem
+h4
+	font-size: 1.2rem
+
+.fw3
+	font-weight: 300
+
+.fw7
+	font-weight: 700
+
+
+.bright-text
+	color: #fff
+
+.brd
+	border: 1px solid red
+
+.icon-delete
+	color: #ccc
+	&:hover
+		color: $red
+.icon-edit 
+	color: #ccc
+	&:hover
+		color: $green
+
+.login-register-background
+	background-color: $palette2
+
+.no-bg-text
+	h1,h2,h3,h4,h5,p,span
+		color: $palette-grey
+
+.custom-form
+	min-width: 100%
+	label
+		font-size: 1.2rem
+		font-weight: 400
+		vertical-align: middle
+		i.dot
+			color: $blue
+			font-size: .2rem
+			vertical-align: middle
+
+//
+// |--------------------------------------------------------------------------
+// | VENDORS
+// |--------------------------------------------------------------------------
+//
+
+// Datepicker
+.mx-datepicker
+	width: 100% !important
+
+// Multiple Image
+.multiple-image-plugin
+	.image-container
+		width: 100% !important
+
+.badge
+	color: #fff
+	font-size: 0.8rem
+	font-weight: 300
+
+//
+// |--------------------------------------------------------------------------
+// | SIDEBAR
+// |--------------------------------------------------------------------------
+//
+
+$sidebarHeader: $palette1
+$sidebar: $palette4
+$header: $palette3
+$sidebar-background: $palette1
+$sidebar-header: $palette2
+
+$sidebar-item-icon: $palette6
+$sidebar-item-icon-background: $palette1
+
+$sidebar-item: $palette4
+$sidebar-item-opnened: $palette2
+$sidebar-item-hover: $palette1
+	
+$sidebar-item-child: $palette3
+$sidebar-item-child-hover: $palette4
+
+
+.sidebar
+	background-color: $sidebar	
+
+	.sidebar-item
+		background-color: $sidebar-item
+		border-bottom: 1px solid $palette1
+		&:hover
+			background-color: $sidebar-item-hover
+			cursor: pointer
+		a
+			i.sidebar-item-icon
+				// background-color: $sidebar-item-icon-background
+				color: $sidebar-item-icon
+			img.icon
+	.sidebar-item-opened
+		background-color: $sidebar-item-opnened
+	
+	.sidebar-header
+		background-color: $sidebarHeader !important
+
+.nav-header
+	background-color: $sidebarHeader
+	

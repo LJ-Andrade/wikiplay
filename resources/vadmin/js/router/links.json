@@ -1,0 +1,90 @@
+
+{
+	"name": "root",
+	"children": [
+		{
+			"name": "Inicio",
+			"route": "dashboard",
+            "bicon": "house"
+		},
+		{
+			"name": "Usuarios",
+			"route": "users",
+            "bicon": "plus"
+		},
+		{
+			"name": "Artículos",
+            "bicon": "collection",
+			"children": [
+				{
+					"name": "Listado",
+					"route": "articles",
+                    "bicon": "list-task"
+				},
+				{
+					"name": "Creación de Artículo",
+					"route": "articles_create",
+                    "bicon": "plus"
+				},
+				{
+					"name": "Categorías",
+					"route": "articleCategories",
+					"bicon": "card-list"
+				}
+			]
+		},
+		{
+			"name": "Configuraciones",
+            "bicon": "plug",
+			"children": [
+				{
+					"name": "Generales",
+					"route": "settings",
+                    "bicon": "gear"
+				},
+				{
+					"name": "Roles",
+					"route": "roles",
+                    "bicon": "person-lines-fill"
+				},
+				{
+					"name": "Permisos",
+					"route": "permissions",
+                    "bicon": "lock"
+				},
+				{ 
+					"name": "Localización",
+					"bicon": "map",
+					"children": [
+						{
+							"name": "Provincias",
+							"route": "provs",
+							"bicon": "geo-alt"
+						},
+						{
+							"name": "Localidades",
+							"route": "locs",
+							"bicon": "geo"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "DevZone",
+			"bicon": "gem",
+			"children": [
+				{
+					"name": "Icons",
+					"route": "dev_utilities",
+                    "bicon": "bootstrap"
+				},
+				{
+					"name": "Tareas de desarrollo",
+					"route": "dev_tasks",
+                    "bicon": "list-task"
+				}
+			]
+		}
+	]
+  }

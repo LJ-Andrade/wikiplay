@@ -1,0 +1,142 @@
+//
+// |--------------------------------------------------------------------------
+// | FONTS
+// |--------------------------------------------------------------------------
+//
+
+// Fonts stored locally
+@font-face
+	font-family: "Roboto"
+	src: url("/fonts/web/Roboto-Regular.ttf")
+	font-weight: 400
+	font-style: normal
+
+@font-face
+	font-family: "Roboto"
+	src: url("/fonts/web/Roboto-Light.ttf")
+	font-weight: 300
+	font-style: normal
+
+@font-face
+	font-family: "Roboto"
+	src: url("/fonts/web/Roboto-Bold.ttf")
+	font-weight: 700
+	font-style: normal
+
+@font-face
+	font-family: "Titan One"
+	src: url("/fonts/web/TitanOne-Regular.ttf")
+	font-weight: 700
+	font-style: normal
+
+$font1: 'Roboto', sans-serif
+$font2: 'Titan One', cursive
+
+// Bootstrap Variables
+$font-family-sans-serif: $font1
+$font-size-base: 16.5px
+$line-height-base: 1.6
+
+.italic
+	font-style: italic
+
+//
+// |--------------------------------------------------------------------------
+// | COLORS
+// |--------------------------------------------------------------------------
+//
+
+// Custom Colors
+// Main palette
+$palette1: #003399
+$palette2: #006AD7
+$palette3: #9AD9EA
+$palette4: #5f83B1
+$palette-grey: #adadad
+
+
+$grey-l: #D5D5D5
+$grey-l2: #f0f0f0
+$red: #bd4242
+$green: #4e914e
+
+// Boostrap Variables
+$blue: #1a72f5
+$indigo: #6574cd
+$purple: #9561e2
+$pink: #f66d9b
+$red: #e3342f
+$orange: #f6993f
+$yellow: #ffed4a
+$green: #38c172
+$teal: #4dc0b5
+$cyan: #6cb2eb
+
+.white-text
+	color: #fff
+.black-text
+	color: #000
+.light
+	font-weight: 300
+.bold
+	font-weight: 700
+
+//
+// |--------------------------------------------------------------------------
+// | VARIABLES
+// |--------------------------------------------------------------------------
+//	
+
+$nav-bg: #000
+$nav-text: #fff
+$nav-text-active: red
+
+// Body
+$body-bg: #1a1a1a
+
+//
+// |--------------------------------------------------------------------------
+// | RESETS
+// |--------------------------------------------------------------------------
+//
+
+ul
+	padding: 0 !important
+	margin: 0 !important
+	li
+		list-style-type: none !important
+
+a
+	&:hover
+		text-decoration: none !important
+
+
+	
+//
+// |--------------------------------------------------------------------------
+// | HELPERS
+// |--------------------------------------------------------------------------
+//
+
+.pt-150
+	padding-top: 150px
+
+.pt-50
+	padding-top: 50px
+
+.brd
+	border: 1px solid red
+
+@media (max-width: 768px)
+	.hide-mobile
+		display: none
+
+.one-line-ellipsis
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+
+@media (max-width: 1085px)
+	.container
+		width: 100%
+		max-width: none

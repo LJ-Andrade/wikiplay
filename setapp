@@ -1,0 +1,69 @@
+#!/bin/bash
+
+echo ----------------------------------
+echo Configurando la aplicación VADMIN2
+echo ----------------------------------
+
+# COMPOSER
+read -p "Instalar/actualizar Composer ? (y/n) " -n 1 -r
+echo  
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	echo Instalando/Actualizando Composer
+	composer update
+fi
+
+read -p "Generar llave de aplicación ? (y/n) " -n 1 -r
+echo  
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	echo " "
+	echo Generando llave de aplicación
+	php artisan key:generate
+	echo Llave de aplicación generada
+	echo " "
+fi
+
+
+# NPM
+read -p "Instalar NPM ? (y/n) " -n 1 -r
+echo  
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	echo Instalando/Actualizando NPN
+	npm install
+	npm update
+fi
+
+read -p "Desea refrescar las migraciones ? (y/n)" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	php artisan migrate:fresh
+fi
+
+read -p "Desea rellenar las tablas ? (y/n)" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	php artisan db:seed
+fi
+
+read -p "Comenzar con la compilación de recursos? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	echo Compilando archivos y vigilando cambios
+	npm run watch
+fi
+
+echo " "
+echo " "
+echo ------------------------------------
+echo Aplicación configurada correctamente
+echo " "
+echo Que tengas un buen desarrollo !
+echo ------------------------------------
+echo " "
+echo No rompas nada...
+echo " "

@@ -1,0 +1,194 @@
+//
+// |--------------------------------------------------------------------------
+// | FONTS
+// |--------------------------------------------------------------------------
+//
+
+// CDN Fonts
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700&display=swap')
+
+// Fonts stored locally
+
+	// Open Sans
+
+@font-face
+	font-family: "OpenSans"
+	src: url("../../fonts/OpenSans-Light.ttf")
+	font-weight: 300
+	font-style: normal
+
+@font-face
+	font-family: "OpenSans"
+	src: url("../../fonts/OpenSans-LightItalic.ttf")
+	font-weight: 300
+	font-style: italic
+
+@font-face
+	font-family: "OpenSans"
+	src: url("../../fonts/OpenSans-Regular.ttf")
+	font-weight: 400
+	font-style: normal
+
+@font-face
+	font-family: "OpenSans"
+	src: url("../../fonts/OpenSans-Italic.ttf")
+	font-style: italic
+
+@font-face
+	font-family: "OpenSans"
+	src: url("../../fonts/OpenSans-Bold.ttf")
+	font-weight: 700
+	font-style: normal
+
+
+// $font1: 'Montserrat', sans-serif
+$font1: 'OpenSans', sans-serif
+
+// Bootstrap Variables
+$font-family-sans-serif: $font1
+$font-size-base: 0.9rem
+$line-height-base: 1.6
+
+//
+// |--------------------------------------------------------------------------
+// | COLORS
+// |--------------------------------------------------------------------------
+//
+
+// Custom Colors
+// Main palette
+$palette1: #232639
+$palette2: #2c2e43
+$palette3: #323449
+$palette4: #353851
+$palette5: #33374f
+$palette6: #8588ad
+$palette-l: #dbdce3
+$palette-grey: #adadad
+$palette-grey-l: #e9eaed
+
+.color-palette1
+	color: $palette1
+
+$focus-shadow: rgba($palette1, 0.25)
+
+// Boostrap Variables
+$blue: #e980ff
+$indigo: #6574cd
+$purple: #9561e2
+$pink: #f66d9b
+$red: #ea605c
+$orange: #f6993f
+$yellow: #ffed4a
+$green: #9cbb6f
+$teal: #4dc0b5
+$cyan: #6cb2eb
+
+.white-text
+	color: #fff
+.black-text
+	color: #000
+.light
+	font-weight: 300
+.semi
+	font-weight: 400
+.bold
+	font-weight: 700
+
+//
+// |--------------------------------------------------------------------------
+// | VARIABLES
+// |--------------------------------------------------------------------------
+//
+
+$nav-text: #fff
+$nav-text-active: red
+
+
+// Body
+$body-bg: $palette-grey-l
+
+//
+// |--------------------------------------------------------------------------
+// | RESETS
+// |--------------------------------------------------------------------------
+//
+
+ul
+	padding: 0 !important
+	margin: 0 !important
+	li
+		list-style-type: none !important
+
+a
+	&:hover
+		text-decoration: none !important
+
+.btn.focus, .btn-outline-secondary.focus
+	box-shadow: 0 0 0 0.1rem $focus-shadow !important
+.btn, .form-control, .btn-outline-secondary
+	&:focus
+		box-shadow: 0 0 0 0.1rem $focus-shadow !important
+
+// 	border: 1px solid #d8d8d8 !important
+// 	border-radius: 0 !important
+// 	box-shadow: none !important
+
+// .no-focus
+// 	border: 1px solid #d8d8d8 !important
+// 	border-radius: 0 !important
+// 	box-shadow: none !important
+
+//
+// |--------------------------------------------------------------------------
+// | STRUCTURE
+// |--------------------------------------------------------------------------
+//
+
+$navHeaderHeight: 60px
+$mainSectionMargin: 256px
+body
+	overflow-x: hidden
+
+#app
+	height: 100%
+
+.main-wrapper
+	height: $navHeaderHeight
+	margin-left: $mainSectionMargin
+	transition: all 0.2s cubic-bezier(0.97, 0.17, 0.1, 0.4) 0s
+
+.main-wrapper-full
+	margin-left: 0
+
+.main-content
+	padding-top: 75px
+	position: relative
+	padding-bottom: 80px
+	// padding: 75px 10px 10px 10px
+//
+// |--------------------------------------------------------------------------
+// | HELPERS
+// |--------------------------------------------------------------------------
+//
+.cursor-pointer
+	&:hover
+		cursor: pointer
+
+.Hidden
+	display: none !important
+
+.brd
+	border: 1px solid red
+
+.horizontal-list
+	li
+		display: inline
+
+.mobile-spacing
+	height: auto
+
+@media(max-width: 1000px)
+	.mobile-spacing
+		height: 20px
+		width: 100%

@@ -1,0 +1,67 @@
+.slogan
+	background: rgb(4,190,248)
+	background: linear-gradient(180deg, rgba(4,190,248,1) 0%, rgba(4,177,231,1) 78%, rgba(3,152,197,1) 100%)
+	// min-height: 450px
+	@include flex-center
+	padding: 15px 0 50px
+	position: relative
+	// z-index: 500
+	img
+		max-width: 100%
+	.slogan-text
+		width: 100%
+		max-width: 540px
+		position: absolute
+		bottom: 40px
+		text-align: center
+		p
+			font-size: .9rem
+			margin: 0
+			color: #fff
+			font-weight: 400
+
+@media (max-width: 768px)
+	.slogan 
+		min-height: 300px
+		.slogan-text
+			bottom: 40px
+
+
+.search-filters
+	position: relative
+	background: transparent
+	margin-top: -30px
+	.inner
+		@include flex-center
+		padding: 20px 10px 15px 10px
+		background: #fff
+		border: 1px solid #e8e8e8
+		form
+			input,select
+				width: 150px
+				max-width: 100%
+				font-size: 0.8rem
+				padding: 5px 25px 5px 15px
+				margin-right: 12px
+				margin-bottom: 10px
+				font-size: 0.9rem
+				border-radius: 0
+				border: 0
+				@include box-shadow1()
+				font-weight: 400
+			.btn-submit
+				padding: 2px 25px
+				font-size: 0.9rem
+				color: #fff
+				background-color: $palette1
+				border-radius: 0
+				font-family: $font2
+			input,select,.btn-submit
+				height: 35px
+
+
+.small-list-home
+	max-height: 400px
+	// overflow: scroll
+	// overflow-x: hidden
+	
