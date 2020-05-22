@@ -34,27 +34,10 @@
 		</section>
 		<!-- Separation between slogan-filters and map-->
 		<div style="height: 10px"></div> 
-		<section class="container-fluid map">
-			<div class="row">
-				<div class="col-12 col-md-2 col-lg-2 hide-mobile brd">
-					Ads
-				</div>
-				<div class="col-12 col-md-8 col-lg-8">
-					<!-- MAP -->
-					<map-and-articles></map-and-articles>
 
-					<!-- FEATURED ARTICLES -->
-					<featured-articles></featured-articles>
-					
-				</div>
-				<div class="col-12 col-md-2 col-lg-2 brd">
-					Ads
-				</div>
-			</div>
-			
-		</section>
-		<br><br><br><br>	
-
+		<map-and-articles></map-and-articles>
+		<pre-footer></pre-footer>
+		<footer-component></footer-component>
 	</div>
 </template>
 
@@ -62,7 +45,8 @@
 	import CommonMixins from '../mixins/CommonMixin.js';
 	import SearchFilters from "../components/SearchFilters.vue";
 	import MapAndArticles from "../components/MapAndArticles.vue";
-	import FeaturedArticles from "../components/FeaturedArticles.vue";
+	import PreFooter from "../components/PreFooter.vue";
+	import Footer from "../components/Footer.vue";
 	
 	import Vue from 'vue';
 	// import { mapActions, mapMutations, mapState, mapGetters } from "vuex";
@@ -73,7 +57,8 @@
 		components: {
 			'search-filters': SearchFilters,
 			'map-and-articles': MapAndArticles,
-			'featured-articles': FeaturedArticles
+			'pre-footer': PreFooter,
+			'footer-component': Footer
 		},
 		data() {
 			return {

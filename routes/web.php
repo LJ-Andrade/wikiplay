@@ -17,7 +17,7 @@ Route::get('/test', 'Core\SpaController@test');
 // WebSite
 Route::get('/', 'Web\WebController@index');
 Route::get('getArticles', 'Web\WebController@getArticles');
-Route::get('getFeaturedArticles', 'Web\WebController@getFeaturedArticles');
+Route::get('getSpecialArticles', 'Web\WebController@getSpecialArticles');
 Route::get('getCategories', 'Web\WebController@getCategories');
 
 // Route::get('/', function () {

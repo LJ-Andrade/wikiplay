@@ -11,6 +11,8 @@ use App\ArticleCategory;
 
 use App\Traits\CrudTrait;
 
+use Carbon\Carbon;
+
 class WebController extends Controller
 {
 	use CrudTrait;
@@ -45,9 +47,46 @@ class WebController extends Controller
 
     }
 	
-	public function getFeaturedArticles() {
+	public function getSpecialArticles() {
 
-		return Article::where('featured', true)->get();
+		$newestArticle = Article::orderBy('date_begin', 'DESC')->with('images')->with('loc')->first();
+
+		// $now = Carbon::now();
+		$from =  Carbon::now('America/Buenos_Aires');
+		// dd($from);
+		$to = 	$from->endOfWeek();
+		// dd($from);
+		$thisWeekArticle = Article::whereBetween('created_at', [Carbon::now('America/Buenos_Aires'), Carbon::now('America/Buenos_Aires')->endOfWeek()])
+			->with('loc')
+			->first();
+
+		$freeArticles = Article::where('price', '0')
+			->with('loc')
+			->with('category')
+			->with('images')
+			->take(4)
+			->get();
+
+		$allFamilyArticles = Article::where('age_from', '>', '0')
+			->with('loc')
+			->with('category')
+			->with('images')
+			->take(3)
+			->get();
+
+		
+		$featuredArticles = Article::where('featured', true)->where('id', '!=', $newestArticle->id)
+			->with('loc')
+			->with('images')
+			->get();
+		// dd($featuredArticles);
+		return  [ 	
+					'featuredArticles' => $featuredArticles, 
+					'newestArticle' => $newestArticle, 
+					'thisWeek' => $thisWeekArticle,
+					'freeArticles' => $freeArticles,
+					'allFamilyArticles' => $allFamilyArticles 
+				];
 
 	}	
 

@@ -8,8 +8,7 @@ Vue.use(Vuex);
 const state = {
 	query: '',
 	articles: [],
-	featuredArticles: [],
-	newestArticle: [],
+	specialArticles: [],
 	markers: [],
 }
 
@@ -36,26 +35,29 @@ const actions = {
 		}
 
 	},
-	async fetchfeaturedArticles({commit}) {
-		// console.log("fetching specialArticles");
-		const response = await axios.get('getFeaturedArticles');
 
-		try {
-			commit('setFeaturedArticles', response.data);
-		} catch (error) {
-			console.log('Error getting articles');
-			console.log(error);
-		}
-		finally {
-			
-		}
-	}
+	
+	fetchSpecialArticles({commit}) {
+		axios.get('getSpecialArticles')
+			.then((res) => {
+				commit('setSpecialArticles', res.data);
+				// console.log(res.data);
+			})
+			.catch((error) => {
+				console.error('Error on getSpecialArticles()');
+				console.error(error);
+			}).finally(() => {
+
+			});
+	},
+
+
 }
 
 
 const getters = {
 	allArticles: (state) => state.articles,
-	featuredArticles: (state) => state.featuredArticles,
+	specialArticles: (state) => state.specialArticles,
 	selectedItems: (state) => state.selectedItems,
 	apiUrl: (state) => state.apiUrl,
 	assetSrc: (state) => state.assetSrc
@@ -63,7 +65,7 @@ const getters = {
 
 const mutations = {
 	setArticles: (state, articles) => (state.articles = articles),
-	setFeaturedArticles: (state, featuredArticles) => (state.featuredArticles = featuredArticles),
+	setSpecialArticles: (state, specialArticles) => (state.specialArticles = specialArticles),
 }
 
 export default new Vuex.Store({

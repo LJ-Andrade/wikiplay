@@ -19,6 +19,11 @@ class Article extends Model
         return $this->belongsTo('App\Prov');
     }
 
+    public function loc()
+    {
+        return $this->belongsTo('App\Loc');
+    }
+
     public function category()
     {
     	return $this->belongsTo('App\ArticleCategory');
